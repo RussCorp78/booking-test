@@ -1,0 +1,210 @@
+/* ------------------------------
+GENERAL
+------------------------------ */
+* {
+box-sizing: border-box;
+}
+body {
+margin: 0;
+padding: 20px;
+font-family: Arial, Helvetica, sans-serif;
+background: #f2f2f2;
+color: #222;
+}
+/* ------------------------------
+MAIN CONTAINER
+------------------------------ */
+.booking-container {
+width: 100%;
+max-width: 700px;
+margin: 0 auto;
+padding: 25px;
+background: white;
+border-radius: 15px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+h1 {
+text-align: center;
+margin-top: 0;
+}
+/* ------------------------------
+CALENDAR HEADER
+------------------------------ */
+.calendar-header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 15px;
+}
+.calendar-header h2 {
+margin: 0;
+font-size: 22px;
+}
+.nav-button {
+width: 45px;
+height: 40px;
+border: none;
+border-radius: 8px;
+background: #333;
+color: white;
+font-size: 28px;
+cursor: pointer;
+}
+.nav-button:hover {
+opacity: 0.8;
+}
+/* ------------------------------
+WEEKDAYS
+------------------------------ */
+.weekdays {
+display: grid;
+grid-template-columns:
+repeat(7, 1fr);
+gap: 5px;
+margin-bottom: 5px;
+font-weight: bold;
+text-align: center;
+}
+.weekdays div {
+padding: 8px 2px;
+}
+/* ------------------------------
+CALENDAR DAYS
+------------------------------ */
+.calendar-days {
+display: grid;
+grid-template-columns:
+repeat(7, 1fr);
+gap: 5px;
+}
+.calendar-day {
+min-height: 55px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 8px;
+background: #eeeeee;
+cursor: pointer;
+font-size: 16px;
+}
+.calendar-day:hover {
+background: #dddddd;
+}
+.calendar-day.empty {
+background: transparent;
+cursor: default;
+}
+.calendar-day.today {
+border: 2px solid #333;
+}
+.calendar-day.selected {
+background: #333;
+color: white;
+}
+/* ------------------------------
+APPOINTMENTS
+------------------------------ */
+.appointments-section {
+margin-top: 30px;
+}
+.appointments-section h2 {
+margin-bottom: 5px;
+}
+.instruction {
+color: #666;
+}
+.appointment-slots {
+display: grid;
+grid-template-columns:
+repeat(2, 1fr);
+gap: 10px;
+}
+.slot {
+padding: 14px;
+border: none;
+border-radius: 8px;
+font-size: 16px;
+cursor: pointer;
+}
+.slot.available {
+background: #dff2df;
+color: #155724;
+}
+.slot.available:hover {
+background: #c8e6c9;
+}
+.slot.booked {
+background: #eeeeee;
+color: #888;
+cursor: not-allowed;
+}
+/* ------------------------------
+BOOKING FORM
+------------------------------ */
+.booking-form {
+margin-top: 30px;
+padding-top: 20px;
+border-top: 1px solid #ddd;
+}
+.booking-form label {
+display: block;
+margin-top: 15px;
+margin-bottom: 5px;
+font-weight: bold;
+}
+.booking-form input {
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 7px;
+font-size: 16px;
+}
+.form-buttons {
+display: flex;
+gap: 10px;
+margin-top: 20px;
+}
+.form-buttons button {
+flex: 1;
+padding: 13px;
+border: none;
+border-radius: 8px;
+font-size: 16px;
+cursor: pointer;
+}
+.primary-button {
+background: #333;
+color: white;
+}
+.secondary-button {
+background: #ddd;
+color: #222;
+}
+.booking-message {
+margin-top: 15px;
+font-weight: bold;
+}
+/* ------------------------------
+UTILITY
+------------------------------ */
+.hidden {
+display: none;
+}
+/* ------------------------------
+MOBILE
+------------------------------ */
+@media (max-width: 500px) {
+body {
+padding: 10px;
+}
+.booking-container {
+padding: 15px;
+}
+.calendar-day {
+min-height: 45px;
+font-size: 14px;
+}
+.appointment-slots {
+grid-template-columns: 1fr;
+}
+}
