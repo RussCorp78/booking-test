@@ -1245,7 +1245,7 @@ confirmBooking.addEventListener(
             await loadAppointments();
 
             // Refresh the displayed slots
-            showAppointments(selectedDate);
+            createAppointmentSlots();
 
 
 
