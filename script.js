@@ -1241,10 +1241,11 @@ confirmBooking.addEventListener(
             */
 
 
-
+            // Reload appointments from Supabase
             await loadAppointments();
 
-
+            // Refresh the displayed slots
+            showAppointments(selectedDate);
 
 
 
