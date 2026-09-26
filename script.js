@@ -8,7 +8,7 @@
 
 // Replace these two values with your own
 
-const SUPABASE_URL = "https://ghvkjlhnmdhmlwtmushh.supabase.co/rest/v1/";
+const SUPABASE_URL = "https://ghvkjlhnmdhmlwtmushh.supabase.co";
 
 const SUPABASE_KEY = "sb_publishable__18dLc0O4aGcVc_695NVkg_CSQCvZhY";
 
